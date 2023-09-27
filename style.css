@@ -1,0 +1,52 @@
+img.bouge {
+    animation: wiggle 1s linear 60;
+  }
+  
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-25deg);
+    }
+    20% {
+      transform: rotateZ(15deg);
+    }
+    25% {
+      transform: rotateZ(-15deg);
+    }
+    30% {
+      transform: rotateZ(10deg);
+    }
+    35% {
+      transform: rotateZ(-7deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  nav{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #0F9DED;
+    width: 100px;
+  }
+
+  #imgChrono{
+    width: 40px;
+    height: auto;
+  }
+
+  #timer{
+    font-weight: bold;
+    margin-right: 10px;
+  }
