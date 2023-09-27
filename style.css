@@ -40,7 +40,18 @@ html {
   background-color: #EBEBFF;
 }
 
-#container {
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-width: 1px;
+  border-bottom-color: #868686;
+}
+
+#containertimer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -72,20 +83,7 @@ html {
   font-size: 15px;
   font-weight: 900;
   line-height: normal;
-  flex-direction: column;
-  justify-content: center;
   flex-shrink: 0;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  border: solid;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom-width: 1px;
-  border-bottom-color: #868686;
 }
 
 #imglogo {
