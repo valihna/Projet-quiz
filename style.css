@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   background-color: white;
 }
@@ -13,85 +13,94 @@ body{
 /* NAVBAR */
 
 img.bouge {
-    animation: wiggle 1s linear 60;
-  }
-  
-  /* Keyframes */
-  @keyframes wiggle {
-    0%, 7% {
-      transform: rotateZ(0);
-    }
-    15% {
-      transform: rotateZ(-25deg);
-    }
-    20% {
-      transform: rotateZ(15deg);
-    }
-    25% {
-      transform: rotateZ(-15deg);
-    }
-    30% {
-      transform: rotateZ(10deg);
-    }
-    35% {
-      transform: rotateZ(-7deg);
-    }
-    40%, 100% {
-      transform: rotateZ(0);
-    }
-  }
-
-  nav{
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  #container{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-radius: 10px;
-    background-color: #0F9DED;
-    width: 100px;
-  }
-
-  #imgChrono{
-    width: 40px;
-    height: auto;
-  }
-
-  #timer{
-    font-weight: bold;
-    margin-right: 10px;
-  }
-
-
-  /* MAIN */
-
-main{
-    width: 100%;
-    margin: 0 auto;
+  animation: wiggle 1s linear 60;
 }
 
-#titleQuest-imgCenter{
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap:20px;
-    margin-bottom: 20px;
+/* Keyframes */
+@keyframes wiggle {
+
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+
+  15% {
+    transform: rotateZ(-25deg);
+  }
+
+  20% {
+    transform: rotateZ(15deg);
+  }
+
+  25% {
+    transform: rotateZ(-15deg);
+  }
+
+  30% {
+    transform: rotateZ(10deg);
+  }
+
+  35% {
+    transform: rotateZ(-7deg);
+  }
+
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
 }
 
-#titleImgContainer{
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #0F9DED;
+  width: 100px;
+}
+
+#imgChrono {
+  width: 40px;
+  height: auto;
+}
+
+#timer {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+/* MAIN */
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#titleQuest-imgCenter {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#titleImgContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#containTitle{
+#containTitle {
   margin: auto;
 }
 
-#titleIntro{
+#titleIntro {
   position: relative;
   font-style: bold;
   color: #000000;
@@ -100,23 +109,22 @@ main{
   line-height: normal
 }
 
-#ellipseTitle{
+#ellipseTitle {
   width: 250px;
   height: 100px;
   transform: rotate(5.799deg);
   position: absolute;
 }
 
-#containImg{
+#containImg {
   width: 80%;
   margin-top: 30px;
 }
 
-#imgCenter{
+#imgCenter {
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: -7px 10px 10px grey;
   display: inline-block;
 }
-
