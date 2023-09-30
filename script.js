@@ -2,6 +2,7 @@ const questions = [
   {
     id: 1,
     question: "Ville avec une histoire, une langue propre et des traditions spécifiques, sur quel territoire se trouve Biarritz ?",
+    image: "/assets/biarritz1.png",
     reponses: [
       {
       id: 1,
@@ -29,6 +30,7 @@ const questions = [
   {
     id: 2,
     question: "A quelle sainte femme est dédié un rocher sur lequel est érigée une statue à son effigie ?",
+    image: "/assets/rochervierge.jpg",
     reponses: [
       {
       id: 1,
@@ -56,6 +58,7 @@ const questions = [
   {
     id: 3,
     question: "Dans quel Golfe, faisant partie intégrante de cet océan, se trouve Biarritz ?",
+    image: "/assets/biarritz12.png",
     reponses: [
       {
       id: 1,
@@ -83,6 +86,7 @@ const questions = [
   {
     id: 4,
     question: "Quelle Impératrice des Français, d'origine espagnole, fit le succès de Biarritz en tant que station de villégiature ?",
+    image: "/assets/biarritz10.png",
     reponses: [
       {
       id: 1,
@@ -110,6 +114,7 @@ const questions = [
   {
     id: 5,
     question: "Quelle est l'autre langue régionale reconnue comme autochtone à Biarritz ?",
+    image: "/assets/biarritz3.png",
     reponses: [
       {
       id: 1,
@@ -137,6 +142,7 @@ const questions = [
   {
     id: 6,
     question: "Comment s'appelle le club de rugby de Biarritz ?",
+    image: "/assets/rugybiarritz.jpg",
     reponses: [
       {
       id: 1,
@@ -159,11 +165,12 @@ const questions = [
         validity: false
       }
     ],
-    explication: " Le Biarritz Olympique Pays Basque est un club de rugby à XV français, basé à Biarritz."
+    explication: "Le Biarritz Olympique Pays Basque est un club de rugby à XV français, basé à Biarritz."
   },
   {
     id: 7,
     question: "Quels sont les 3 sports qui caractérisent le plus Biarritz et sa région ?",
+    image: "/assets/biarritz14.png",
     reponses: [
       {
       id: 1,
@@ -191,6 +198,7 @@ const questions = [
   {
     id: 8,
     question: "L'Hôtel du Palais portait un autre nom lors de sa construction en 1854 et jusqu'en 1893, lequel ?",
+    image: "/assets/biarritz13.png",
     reponses: [
       {
       id: 1,
@@ -218,6 +226,7 @@ const questions = [
   {
     id: 9,
     question: "Dans la Vallée d’Ossau, en plein cœur de la montagne, serpente le petit...",
+    image: "/assets/biarritz9.png",
     reponses: [
       {
       id: 1,
@@ -245,6 +254,7 @@ const questions = [
   {
     id: 10,
     question: "L'Aquarium de Biarritz, est connu aussi par le premier nom qui lui a été attribué ?",
+    image: "/assets/biarritz15.png",
     reponses: [
       {
       id: 1,
