@@ -5,9 +5,9 @@ const questions = [
     image: "/assets/biarritz1.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Pays Vasque",
-      validity: false
+        id: 1,
+        label: "Le Pays Vasque",
+        validity: false
       },
       {
         id: 2,
@@ -33,9 +33,9 @@ const questions = [
     image: "/assets/rochervierge.jpg",
     reponses: [
       {
-      id: 1,
-      label: "La Belle Hélène",
-      validity: false
+        id: 1,
+        label: "La Belle Hélène",
+        validity: false
       },
       {
         id: 2,
@@ -61,9 +61,9 @@ const questions = [
     image: "/assets/biarritz12.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Golfe de d'Artagnan",
-      validity: false
+        id: 1,
+        label: "Le Golfe de d'Artagnan",
+        validity: false
       },
       {
         id: 2,
@@ -89,9 +89,9 @@ const questions = [
     image: "/assets/biarritz10.png",
     reponses: [
       {
-      id: 1,
-      label: "Eugénie de Montijo",
-      validity: true
+        id: 1,
+        label: "Eugénie de Montijo",
+        validity: true
       },
       {
         id: 2,
@@ -117,9 +117,9 @@ const questions = [
     image: "/assets/biarritz3.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Pimentais",
-      validity: false
+        id: 1,
+        label: "Le Pimentais",
+        validity: false
       },
       {
         id: 2,
@@ -145,9 +145,9 @@ const questions = [
     image: "/assets/rugybiarritz.jpg",
     reponses: [
       {
-      id: 1,
-      label: "Biarritz Olympique Pays Basque",
-      validity: true
+        id: 1,
+        label: "Biarritz Olympique Pays Basque",
+        validity: true
       },
       {
         id: 2,
@@ -173,9 +173,9 @@ const questions = [
     image: "/assets/biarritz14.png",
     reponses: [
       {
-      id: 1,
-      label: "Le poker, la belotte et le tarot",
-      validity: false
+        id: 1,
+        label: "Le poker, la belotte et le tarot",
+        validity: false
       },
       {
         id: 2,
@@ -201,9 +201,9 @@ const questions = [
     image: "/assets/biarritz13.png",
     reponses: [
       {
-      id: 1,
-      label: "Villa Ceezar",
-      validity: false
+        id: 1,
+        label: "Villa Ceezar",
+        validity: false
       },
       {
         id: 2,
@@ -229,9 +229,9 @@ const questions = [
     image: "/assets/biarritz9.png",
     reponses: [
       {
-      id: 1,
-      label: "Poucet",
-      validity: false
+        id: 1,
+        label: "Poucet",
+        validity: false
       },
       {
         id: 2,
@@ -257,9 +257,9 @@ const questions = [
     image: "/assets/biarritz15.png",
     reponses: [
       {
-      id: 1,
-      label: "Le musée des phoques",
-      validity: false
+        id: 1,
+        label: "Le musée des phoques",
+        validity: false
       },
       {
         id: 2,
@@ -293,18 +293,16 @@ let temps = 60;
 const timerElement = document.getElementById("timer");
 
 function diminuerTemps() {
-    document.querySelector("#imgChrono").className = "bouge";
+  document.querySelector("#imgChrono").className = "bouge";
 
-    let minutes = parseInt(temps / 60, 10);
-    let secondes = parseInt(temps % 60, 10);
+  let minutes = parseInt(temps / 60, 10);
+  let secondes = parseInt(temps % 60, 10);
 
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    secondes = secondes < 10 ? "0" + secondes : secondes;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  secondes = secondes < 10 ? "0" + secondes : secondes;
 
-    timerElement.innerText = `${minutes} : ${secondes}`;
-    temps = temps <= 0 ? 0 : temps - 1;
-  }
-  
-  setInterval(diminuerTemps, 1000);
- 
-  
+  timerElement.innerText = `${minutes} : ${secondes}`;
+  temps = temps <= 0 ? 0 : temps - 1;
+}
+
+setInterval(diminuerTemps, 1000);
