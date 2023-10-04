@@ -41,7 +41,82 @@ img.bouge {
   30% {
     transform: rotateZ(10deg);
   }
+
 }
+
+  #timer{
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  /* Main */
+  #section-button {
+     
+    padding:206 22px;
+    border: 10 10 10 10;
+    border-radius: 10;
+    width: 206;
+    height: 22;
+
+    font-size: 12px; 
+    font-family: Rubik; 
+    font-style: italic; 
+    text-align: center;
+    word-wrap: "break-word";
+  }
+
+  .Commencer {
+    color: black;
+    background-color: #0F9DED;
+    border-radius: 10px;
+    padding: 206 22;
+    font-family: Rubik; 
+    font-size: 2rem;
+  }
+
+ 
+  
+  /* section */
+
+#bouton-reponse {
+  display: grid;
+  grid-template-columns: 1fr 1fr  ;
+  gap: 20px;
+  font-family: Rubik; 
+  font-style: italic;  
+  /*visibility: hidden*/
+}
+
+#Valider {
+ grid-column: span 2; 
+}
+
+  #cadre {
+    border-radius: 10px;
+    background-color:#42B4F4;
+  }
+  
+
+
+#bouton-reponse button {
+  display: block;
+  margin: 150PX auto 0;
+  padding: 25px 80px;
+  border-radius: 10px;
+}
+
+.graybtn {
+  background-color: #868686;
+}
+
+.bluebtn {
+ background-color:#0F9DED;
+
+}
+
+
+
+
 
 nav {
   display: flex;
