@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <title>Test Timer</title>
+    <title>Quiz Biarritz</title>
 </head>
 
-<body>
-    <nav>
-        <A></A>
+<body>    
+       
+
+    <nav class="sticky">
+
         <img src="assets/logobiaritz.png" alt="logo" id="imglogo" />
         <div id="time">
             <div id="containertimer">
                 <img src="assets/chrono.png" alt="chrono" id="imgChrono" />
-                <!--<a>href=</a>-->
+                
                 <div id="timer"></div>
+
+                <div id="timer">00:00</div>
+
             </div>
         </div>
     </nav>
@@ -27,15 +32,25 @@
                 <div id="containTitle">
                     <img src="assets/Ellipse_6.png" alt="ellipse" id="ellipseTitle">
                     <h1 id="titleIntro">QUIZ BIARRITZ</h1>
+                    <p id="question"></p>
                 </div>
                 <div id="containImg">
                     <img src="/assets/biarritz2.png" alt="paysage-biarritz" id="imgCenter">
                 </div>
+                <div id="explication"></div>
             </article>
         </section>
 
-
-        <section></section>
+        <section id="section-button">
+          <button id="buttonCommencer" class="Commencer">Commencer le quiz</button> 
+            <section id="bouton-reponse" style="visibility:hidden"> 
+                <button id="A" class="changeColor">A</button> 
+                <button id="B" class="changeColor">B</button>
+                <button id="C" class="changeColor">C</button>
+                <button id="D"class="changeColor">D</button>
+                <button id="Valider">Valider</button>
+                <button id="suivant">Suivant</button> 
+            </section>
     </main>
 
     <footer>
