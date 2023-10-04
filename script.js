@@ -1,3 +1,4 @@
+
 const questions = [
   {
     id: 1,
@@ -272,6 +273,65 @@ const questions = [
 ];
 
 
+/* feature/buttonDesign changecolor*/ 
+
+
+
+/*function red(){
+	changeColor.style.backgroundColor = "red";
+};
+function blue(){
+	changeColor.style.backgroundColor = "blue";
+}; */
+
+
+/*changeColor.addEventListener("click", red);
+changeColor.addEventListener("click", blue); */
+let changeColor = document.querySelectorAll(".changeColor");
+
+for (let i = 0; i < changeColor.length; i++) {
+  changeColor[i].addEventListener('click', () => {
+  
+    console.log(changeColor[i].className)
+    if (changeColor[i].className.includes("graybtn")){
+    changeColor[i].classList.replace("graybtn", "bluebtn")
+  } else {
+    changeColor[i].classList.replace("bluebtn", "graybtn")
+  }
+});
+}  
+
+/*$$$$$$$$$l$$$$$$$$$$$$$$ 
+let choise = true;
+function changeColor(){
+  let button = document.getElementById("button");
+  if( choise == true ) {
+    changeColor.style.backgroundColor = "green";
+    choise = false;
+  }
+  else{
+    changeColor.style.backgroundColor = "red";
+    choise = true;
+  }
+}
+$$$$$$$$$$*/
+
+/*addChangeColorClicker();
+element.addEventListener("click", changeColor() { alert("background-color"), });
+console.log("hello") 
+
+/*element.addEventListener("click", changeColor);*/
+
+/*const addChangeColorClicker = () => {
+  changeColor = document.querySelectorAll('.changeColor')
+  for (let i = 0; i < changeColor.length; i++) {
+    changeColor[i].addEventListener('click', () => {
+    if (changeColor[i].style.background ==="blue") changeColor[i].style.background="grey"
+    else changeColor[i].style.background="blue"
+
+  }) 
+ }
+}*/
 
 
 
@@ -279,6 +339,8 @@ const questions = [
 /* CHRONO */
 
 let temps = 60;
+
+
 
 const timerElement = document.getElementById("timer");
 

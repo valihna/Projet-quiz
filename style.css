@@ -40,7 +40,7 @@ img.bouge {
   30% {
     transform: rotateZ(10deg);
   }
-
+}
 
   #timer{
     font-weight: bold;
@@ -72,6 +72,8 @@ img.bouge {
     font-size: 2rem;
   }
 
+ 
+  
   /* section */
 
 #bouton-reponse {
@@ -99,7 +101,16 @@ img.bouge {
   margin: 150PX auto 0;
   padding: 25px 80px;
   border-radius: 10px;
+}
 
+.graybtn {
+  background-color: #868686;
+}
+
+.bluebtn {
+ background-color:#0F9DED;
+
+}
 
 nav {
   display: flex;
