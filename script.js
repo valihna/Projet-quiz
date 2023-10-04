@@ -302,10 +302,10 @@ function diminuerTemps() {
   }
   
 
-  /* Démarrer le quiz */
-  let questNumber = 0;
-  /* Données à afficher */
+  /* DEMARRER LE QUIZZ */
 
+     /* Données à afficher */
+  let questNumber = 0;
 
   const afficheQuestions = () => {
     
@@ -342,11 +342,12 @@ function diminuerTemps() {
   const boutonReponse = document.getElementById("bouton-reponse");
   const valider = document.getElementById("Valider");
 
-  buttonCommencer.addEventListener("click", (event) => {
+  buttonCommencer.addEventListener("click", () => {
     buttonCommencer.style.display = "none";
     boutonReponse.style.visibility = "visible";
     goQuiz(questNumber);
   });
+
 
 
   /*La première question apparait avec ses réponses, l'explication reste cachée*/
@@ -354,7 +355,7 @@ function diminuerTemps() {
    /*si réponse sélectionnée => on affiche l'explication, la réponse donnée est verte ou rouge et la bonne réponse est mise en vert (à ajouter)*/
    /* sinon rien ne se passe jusqu'à ce que l'utilisateur est sélectionné une réponse*/
   const goQuiz = (questNumber) => {
-    console.log(questNumber);
+    temps = 60;
     const quest = document.getElementById("titleQuest-imgCenter");
     const sectionButton = document.getElementById("section-button");
 
@@ -374,6 +375,10 @@ function diminuerTemps() {
       explication.style.display = "block";
       valider.style.display = "none";
       suivant.style.display = "block";
+
+      /*ICI CODER le "IF" POUR LA SELECTION DE LA REPONSE DE L'UTILSATEUR*/ 
+      /*SI CHOISIT 1 REPONSE => CHANGER LA COULEUR, SI REPONSE FAUSSE METTRE EN ROUGE OU METTRE EN VERT SI REPONSE JUSTE ET COMPTER +1 DANS UNE VARIABLE GLOBALE */
+      /*SI PAS DE REPONSE CHOISIT RIEN NE SE PASSE*/
      
       clearInterval(timeStop);
       timer.innerHTML = "00:00";
@@ -386,7 +391,7 @@ function diminuerTemps() {
   };
 
   const butSuivant = () => {
-    suivant.addEventListener("click", (event) => {
+      suivant.addEventListener("click", () => {
       questNumber++;
       goQuiz(questNumber);
     });
