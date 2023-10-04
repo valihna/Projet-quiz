@@ -351,7 +351,7 @@ console.log("hello")
 
 /* CHRONO */
 
-let temps = 60;
+let temps = 59;
 
 
 
@@ -424,7 +424,7 @@ function diminuerTemps() {
    /*si réponse sélectionnée => on affiche l'explication, la réponse donnée est verte ou rouge et la bonne réponse est mise en vert (à ajouter)*/
    /* sinon rien ne se passe jusqu'à ce que l'utilisateur est sélectionné une réponse*/
   const goQuiz = (questNumber) => {
-    temps = 60;
+    temps = 59;
     const quest = document.getElementById("titleQuest-imgCenter");
     const sectionButton = document.getElementById("section-button");
 
@@ -441,17 +441,24 @@ function diminuerTemps() {
 
     valider.addEventListener("click", (event) => {
       event.preventDefault;
-      explication.style.display = "block";
-      valider.style.display = "none";
-      suivant.style.display = "block";
 
-      /*ICI CODER le "IF" POUR LA SELECTION DE LA REPONSE DE L'UTILSATEUR*/ 
-      /*SI CHOISIT 1 REPONSE => CHANGER LA COULEUR, SI REPONSE FAUSSE METTRE EN ROUGE OU METTRE EN VERT SI REPONSE JUSTE ET COMPTER +1 DANS UNE VARIABLE GLOBALE */
-      /*SI PAS DE REPONSE CHOISIT RIEN NE SE PASSE*/
+       /*Si une réponse à la couleur "bleu" elle est sélectionnée donc continue, sinon affiche message*/
+      const repChoisi = true;
+
+      if(repChoisi){
+        explication.style.display = "block";
+        valider.style.display = "none";
+        suivant.style.display = "block";
+
+        clearInterval(timeStop);
+        timer.innerHTML = "00:00";
+        chronoBouge.classList.remove("bouge");
+
+      }else{
+        alert("Merci de sélectionner une réponse avant de cliquer sur valider!");
+      }
      
-      clearInterval(timeStop);
-      timer.innerHTML = "00:00";
-      chronoBouge.classList.remove("bouge");
+      /*SI CHOISIT 1 REPONSE => (VALERIANE) CHANGER LA COULEUR, SI REPONSE FAUSSE METTRE EN ROUGE OU METTRE EN VERT SI REPONSE JUSTE ET (ANTONIN) COMPTER +1 DANS UNE VARIABLE GLOBALE */
      
     });
 
@@ -461,8 +468,12 @@ function diminuerTemps() {
 
   const butSuivant = () => {
       suivant.addEventListener("click", () => {
-      questNumber++;
-      goQuiz(questNumber);
+      if(questNumber !== 9){  
+        questNumber++;
+        goQuiz(questNumber);
+      }else{
+        alert("Quiz fini afficher le score!");
+      }
     });
   };
 
