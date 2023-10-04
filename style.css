@@ -44,80 +44,6 @@ img.bouge {
 
 }
 
-  #timer{
-    font-weight: bold;
-    margin-right: 10px;
-  }
-
-  /* Main */
-  #section-button {
-     
-    padding:206 22px;
-    border: 10 10 10 10;
-    border-radius: 10;
-    width: 206;
-    height: 22;
-
-    font-size: 12px; 
-    font-family: Rubik; 
-    font-style: italic; 
-    text-align: center;
-    word-wrap: "break-word";
-  }
-
-  .Commencer {
-    color: black;
-    background-color: #0F9DED;
-    border-radius: 10px;
-    padding: 206 22;
-    font-family: Rubik; 
-    font-size: 2rem;
-  }
-
- 
-  
-  /* section */
-
-#bouton-reponse {
-  display: grid;
-  grid-template-columns: 1fr 1fr  ;
-  gap: 20px;
-  font-family: Rubik; 
-  font-style: italic;  
-  /*visibility: hidden*/
-}
-
-#Valider {
- grid-column: span 2; 
-}
-
-  #cadre {
-    border-radius: 10px;
-    background-color:#42B4F4;
-  }
-  
-
-
-#bouton-reponse button {
-  display: block;
-  margin: 150PX auto 0;
-  padding: 25px 80px;
-  border-radius: 10px;
-}
-
-.graybtn {
-  background-color: #868686;
-}
-
-.bluebtn {
- background-color:#0F9DED;
-
-}
-
-
-
-
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -180,17 +106,26 @@ nav {
   margin-top: -1px;
 }
 
-/* Main */
+
+/* MAIN */
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/*Section des boutons*/
+
 #section-button {
-  padding: 206 22px;
+     
+  padding:206 22px;
   border: 10 10 10 10;
   border-radius: 10;
   width: 206;
   height: 22;
-
-  font-size: 12px;
-  font-family: Rubik;
-  font-style: italic;
+  font-size: 12px; 
+  font-family: Rubik; 
+  font-style: italic; 
   text-align: center;
   word-wrap: "break-word";
 }
@@ -211,14 +146,12 @@ nav {
 
 }
 
-
 #bouton-reponse {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   font-family: Rubik;
   font-style: italic;
-  /*visibility: hidden*/
 }
 
 #Valider {
@@ -249,10 +182,18 @@ nav {
   line-height: normal;
 }
 
-main {
-  width: 100%;
-  margin: 0 auto;
+
+.graybtn {
+  background-color: #868686;
 }
+
+.bluebtn {
+ background-color:#0F9DED;
+
+}
+
+
+/*Section question, image et explication*/
 
 #titleQuest-imgCenter {
   padding-top: 20px;
@@ -314,6 +255,7 @@ main {
   margin-top: 30px;
   text-align: center;
 }
+
 
 /* FOOTER */
 footer {
