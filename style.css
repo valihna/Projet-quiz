@@ -5,8 +5,9 @@
 body {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 4px;
+  margin-top: 0;
   background-color: #EBEBFF;
+  margin-bottom: 0;
 }
 
 
@@ -51,6 +52,15 @@ nav {
   border-right: 0;
   border-bottom-width: 1px;
   border-bottom-color: #868686;
+  background-color: #e0dada;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border: hidden;
 }
 
 #containertimer {
@@ -61,7 +71,7 @@ nav {
   background-color: #86bafd;
   width: 78px;
   height: 29px;
-  margin-top: 2px;
+  margin-top: 4px;
   flex-shrink: 0;
   margin-bottom: 7px;
   margin-right: 10px;
@@ -70,7 +80,6 @@ nav {
 #imgChrono {
   width: 27px;
   height: 27px;
-  transform: rotate(-36.607deg);
   flex-shrink: 0;
   margin-bottom: 20px;
   margin-right: 0px;
@@ -96,58 +105,73 @@ nav {
   margin-top: -1px;
 }
 
-  /* Main */
-  #section-button {
-     
-    padding:206 22px;
-    border: 10 10 10 10;
-    border-radius: 10;
-    width: 206;
-    height: 22;
+/* Main */
+#section-button {
+  padding: 206 22px;
+  border: 10 10 10 10;
+  border-radius: 10;
+  width: 206;
+  height: 22;
 
-    font-size: 12px; 
-    font-family: Rubik; 
-    font-style: italic; 
-    text-align: center;
-    word-wrap: "break-word";
-    margin-bottom: 50px;
-  }
+  font-size: 12px;
+  font-family: Rubik;
+  font-style: italic;
+  text-align: center;
+  word-wrap: "break-word";
+}
 
-  .Commencer {
-    color: black;
-    background-color: #0F9DED;
-    border-radius: 10px;
-    padding: 206 22;
-    font-family: Rubik; 
-    font-size: 2rem;
-  }
+.Commencer {
+  color: black;
+  background-color: #42B4F4;
+  border-radius: 15px;
+  padding: 206 22;
+  font-family: Rubik;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  border: 0;
+  width: 225px;
+  height: 30px;
+
+}
 
 
 #bouton-reponse {
   display: grid;
-  grid-template-columns: 1fr 1fr  ;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  font-family: Rubik; 
+  font-family: Rubik;
   font-style: italic;
+  /*visibility: hidden*/
 }
 
 #Valider {
- grid-column: span 2; 
+  grid-column: span 2;
 }
 
-#suivant{
+#suivant {
   grid-column: span 2;
 }
 
 #cadre {
   border-radius: 10px;
-  background-color:#42B4F4;
+  background-color: #42B4F4;
 }
-  
+
 #bouton-reponse button {
-  margin: 150PX auto 0;
-  padding: 25px 80px;
-  border-radius: 10px;
+  background-color: #dfdddd;
+  display: block;
+  margin: 20PX auto 0;
+  padding: 20px 60px;
+  border-radius: 15px;
+  border: 0;
+  color: #148BB0;
+  font-family: Rubik;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
 }
 
 main {
@@ -175,12 +199,14 @@ main {
 }
 
 #titleIntro {
+  font-style: italic;
   position: relative;
   font-style: bold;
+  font-family: Rubik;
   color: #000000;
   font-size: 2em;
-  font-weight: 900;
-  line-height: normal;
+  font-weight: 1500;
+  line-height: normal
 }
 
 #ellipseTitle {
@@ -188,7 +214,6 @@ main {
   height: 100px;
   transform: rotate(5.799deg);
   position: absolute;
-  left: 460px;
 }
 
 #containImg {
@@ -198,7 +223,7 @@ main {
 
 #imgCenter {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
   box-shadow: -7px 10px 10px grey;
   display: inline-block;
@@ -206,12 +231,10 @@ main {
 }
 
 #explication{
-  width: 80%;
-  margin: 40px;
   font-size: 1.5em;
+  width: 80%;
+  margin-top: 30px;
 }
-
-
 
 /* FOOTER */
 footer {
@@ -219,6 +242,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-top: 2px solid rgb(187, 183, 183);
+  margin-top: 20px;
 }
 
 
@@ -228,6 +252,8 @@ p {
   font-style: oblique;
   font-size: 20px;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 img {
