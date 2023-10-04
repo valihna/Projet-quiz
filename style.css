@@ -110,6 +110,7 @@ nav {
     font-style: italic; 
     text-align: center;
     word-wrap: "break-word";
+    margin-bottom: 50px;
   }
 
   .Commencer {
@@ -127,12 +128,15 @@ nav {
   grid-template-columns: 1fr 1fr  ;
   gap: 20px;
   font-family: Rubik; 
-  font-style: italic;  
-  /*visibility: hidden*/
+  font-style: italic;
 }
 
 #Valider {
  grid-column: span 2; 
+}
+
+#suivant{
+  grid-column: span 2;
 }
 
 #cadre {
@@ -141,7 +145,6 @@ nav {
 }
   
 #bouton-reponse button {
-  display: block;
   margin: 150PX auto 0;
   padding: 25px 80px;
   border-radius: 10px;
@@ -168,6 +171,7 @@ main {
 
 #containTitle {
   margin: auto;
+  text-align: center;
 }
 
 #titleIntro {
@@ -176,7 +180,7 @@ main {
   color: #000000;
   font-size: 2em;
   font-weight: 900;
-  line-height: normal
+  line-height: normal;
 }
 
 #ellipseTitle {
@@ -184,6 +188,7 @@ main {
   height: 100px;
   transform: rotate(5.799deg);
   position: absolute;
+  left: 460px;
 }
 
 #containImg {
@@ -199,6 +204,14 @@ main {
   display: inline-block;
 
 }
+
+#explication{
+  width: 80%;
+  margin: 40px;
+  font-size: 1.5em;
+}
+
+
 
 /* FOOTER */
 footer {

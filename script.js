@@ -282,10 +282,6 @@ const questions = [
 ];
 
 
-
-
-
-
 /* CHRONO */
 
 let temps = 60;
@@ -305,6 +301,86 @@ function diminuerTemps() {
     temps = temps <= 0 ? 0 : temps - 1;
   }
   
-  setInterval(diminuerTemps, 1000);
  
+ 
+
+  /* Démarrer le quiz */
+  let questNumber = 0;
+  /* Données à afficher */
+  const afficheQuestions = `<article id="titleImgContainer">
+                              <div id="containTitle">
+                                <img src="assets/Ellipse_6.png" alt="ellipse" id="ellipseTitle">
+                                ${console.log(questNumber)}
+                                <h1 id="titleIntro">Question ${questions[questNumber].id}</h1>
+                                <p id="question">${questions[questNumber].question}</p>
+                              </div>
+                              <div id="containImg">
+                                <img src="${questions[questNumber].image}" alt="paysage-biarritz" id="imgCenter">
+                              </div>
+                              <div id="explication" style="display:none">${questions[questNumber].explication}</div>
+                            </article>`;
+
   
+  const afficheReponses = `<section id="bouton-reponse"> 
+                              <button id="A">${questions[questNumber].reponses[0].label}</button> 
+                              <button id="B">${questions[questNumber].reponses[1].label}</button>
+                              <button id="C">${questions[questNumber].reponses[2].label}</button>
+                              <button id="D">${questions[questNumber].reponses[3].label}</button>
+                              <button id="Valider">Valider</button>
+                              <button id="suivant" style="display:none">Suivant</button> 
+                            </section>`;                          
+
+
+  /*Cliquer sur le bouton "démarrer le quiz", il disparait par la suite et la première question avec ses réponses apparaissent*/
+ 
+  const buttonCommencer = document.getElementById("buttonCommencer");
+  const boutonReponse = document.getElementById("bouton-reponse");
+  const valider = document.getElementById("Valider");
+
+  buttonCommencer.addEventListener("click", (event) => {
+    buttonCommencer.style.display = "none";
+    boutonReponse.style.visibility = "visible";
+    goQuiz(questNumber);
+  });
+
+
+  /*La première question apparait avec ses réponses, l'explication reste cachée*/
+   /*On choisit une réponse (à ajouter coloration et rép sélectionnée) et on valide*/ 
+   /*si réponse sélectionnée => on affiche l'explication, la réponse donnée est verte ou rouge et la bonne réponse est mise en vert (à ajouter)*/
+   /* sinon rien ne se passe jusqu'à ce que l'utilisateur est sélectionné une réponse*/
+  const goQuiz = (questNumber) => {
+    const quest = document.getElementById("titleQuest-imgCenter");
+    const sectionButton = document.getElementById("section-button");
+
+    let timeStop = setInterval(diminuerTemps, 1000);
+    quest.innerHTML = afficheQuestions;
+    sectionButton.innerHTML = afficheReponses;
+    
+   
+    const explication = document.getElementById("explication");
+    const suivant = document.getElementById("suivant");
+    const valider = document.getElementById("Valider");
+    const chronoBouge = document.getElementById("imgChrono");
+    const timer = document.getElementById("timer");
+
+    valider.addEventListener("click", (event) => {
+      event.preventDefault;
+      explication.style.display = "block";
+      valider.style.display = "none";
+      suivant.style.display = "block";
+     
+      clearInterval(timeStop);
+      timer.innerHTML = "00:00";
+      chronoBouge.classList.remove("bouge");
+     
+    });
+
+    
+
+    suivant.addEventListener("click", (event) => {
+        questNumber++;
+        console.log(questNumber);
+        goQuiz(questNumber);
+    });
+  };
+ 
