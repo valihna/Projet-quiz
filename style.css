@@ -150,6 +150,10 @@ nav {
   grid-column: span 2;
 }
 
+#suivant {
+  grid-column: span 2;
+}
+
 #cadre {
   border-radius: 10px;
   background-color: #42B4F4;
@@ -191,6 +195,7 @@ main {
 
 #containTitle {
   margin: auto;
+  text-align: center;
 }
 
 #titleIntro {
@@ -223,6 +228,16 @@ main {
   box-shadow: -7px 10px 10px grey;
   display: inline-block;
 
+}
+
+#explication{
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+  color: #148BB0;
+  width: 80%;
+  margin-top: 30px;
+  text-align: center;
 }
 
 /* FOOTER */
