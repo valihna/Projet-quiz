@@ -3,11 +3,12 @@ const questions = [
   {
     id: 1,
     question: "Ville avec une histoire, une langue propre et des traditions spécifiques, sur quel territoire se trouve Biarritz ?",
+    image: "/assets/biarritz1.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Pays Vasque",
-      validity: false
+        id: 1,
+        label: "Le Pays Vasque",
+        validity: false
       },
       {
         id: 2,
@@ -30,11 +31,12 @@ const questions = [
   {
     id: 2,
     question: "A quelle sainte femme est dédié un rocher sur lequel est érigée une statue à son effigie ?",
+    image: "/assets/rochervierge.jpg",
     reponses: [
       {
-      id: 1,
-      label: "La Belle Hélène",
-      validity: false
+        id: 1,
+        label: "La Belle Hélène",
+        validity: false
       },
       {
         id: 2,
@@ -57,11 +59,12 @@ const questions = [
   {
     id: 3,
     question: "Dans quel Golfe, faisant partie intégrante de cet océan, se trouve Biarritz ?",
+    image: "/assets/biarritz12.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Golfe de d'Artagnan",
-      validity: false
+        id: 1,
+        label: "Le Golfe de d'Artagnan",
+        validity: false
       },
       {
         id: 2,
@@ -84,11 +87,12 @@ const questions = [
   {
     id: 4,
     question: "Quelle Impératrice des Français, d'origine espagnole, fit le succès de Biarritz en tant que station de villégiature ?",
+    image: "/assets/biarritz10.png",
     reponses: [
       {
-      id: 1,
-      label: "Eugénie de Montijo",
-      validity: true
+        id: 1,
+        label: "Eugénie de Montijo",
+        validity: true
       },
       {
         id: 2,
@@ -111,11 +115,12 @@ const questions = [
   {
     id: 5,
     question: "Quelle est l'autre langue régionale reconnue comme autochtone à Biarritz ?",
+    image: "/assets/biarritz3.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Pimentais",
-      validity: false
+        id: 1,
+        label: "Le Pimentais",
+        validity: false
       },
       {
         id: 2,
@@ -138,11 +143,12 @@ const questions = [
   {
     id: 6,
     question: "Comment s'appelle le club de rugby de Biarritz ?",
+    image: "/assets/rugybiarritz.jpg",
     reponses: [
       {
-      id: 1,
-      label: "Biarritz Olympique Pays Basque",
-      validity: true
+        id: 1,
+        label: "Biarritz Olympique Pays Basque",
+        validity: true
       },
       {
         id: 2,
@@ -160,16 +166,17 @@ const questions = [
         validity: false
       }
     ],
-    explication: " Le Biarritz Olympique Pays Basque est un club de rugby à XV français, basé à Biarritz."
+    explication: "Le Biarritz Olympique Pays Basque est un club de rugby à XV français, basé à Biarritz."
   },
   {
     id: 7,
     question: "Quels sont les 3 sports qui caractérisent le plus Biarritz et sa région ?",
+    image: "/assets/biarritz14.png",
     reponses: [
       {
-      id: 1,
-      label: "Le poker, la belotte et le tarot",
-      validity: false
+        id: 1,
+        label: "Le poker, la belotte et le tarot",
+        validity: false
       },
       {
         id: 2,
@@ -192,11 +199,12 @@ const questions = [
   {
     id: 8,
     question: "L'Hôtel du Palais portait un autre nom lors de sa construction en 1854 et jusqu'en 1893, lequel ?",
+    image: "/assets/biarritz13.png",
     reponses: [
       {
-      id: 1,
-      label: "Villa Ceezar",
-      validity: false
+        id: 1,
+        label: "Villa Ceezar",
+        validity: false
       },
       {
         id: 2,
@@ -219,11 +227,12 @@ const questions = [
   {
     id: 9,
     question: "Dans la Vallée d’Ossau, en plein cœur de la montagne, serpente le petit...",
+    image: "/assets/biarritz9.png",
     reponses: [
       {
-      id: 1,
-      label: "Poucet",
-      validity: false
+        id: 1,
+        label: "Poucet",
+        validity: false
       },
       {
         id: 2,
@@ -246,11 +255,12 @@ const questions = [
   {
     id: 10,
     question: "L'Aquarium de Biarritz, est connu aussi par le premier nom qui lui a été attribué ?",
+    image: "/assets/biarritz15.png",
     reponses: [
       {
-      id: 1,
-      label: "Le musée des phoques",
-      validity: false
+        id: 1,
+        label: "Le musée des phoques",
+        validity: false
       },
       {
         id: 2,
@@ -271,6 +281,7 @@ const questions = [
     explication: "L'Aquarium de Biarritz, connu aussi sous le premier nom qu'il lui a été attribué, le musée de la Mer, se situe à Biarritz, face au rocher de la Vierge."
   }
 ];
+
 
 
 /* feature/buttonDesign changecolor*/ 
@@ -336,6 +347,8 @@ console.log("hello")
 
 
 
+
+
 /* CHRONO */
 
 let temps = 60;
@@ -345,18 +358,111 @@ let temps = 60;
 const timerElement = document.getElementById("timer");
 
 function diminuerTemps() {
-    document.querySelector("#imgChrono").className = "bouge";
+  document.querySelector("#imgChrono").className = "bouge";
 
-    let minutes = parseInt(temps / 60, 10);
-    let secondes = parseInt(temps % 60, 10);
+  let minutes = parseInt(temps / 60, 10);
+  let secondes = parseInt(temps % 60, 10);
 
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    secondes = secondes < 10 ? "0" + secondes : secondes;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  secondes = secondes < 10 ? "0" + secondes : secondes;
 
     timerElement.innerText = `${minutes} : ${secondes}`;
     temps = temps <= 0 ? 0 : temps - 1;
+}
+  
+
+  /* DEMARRER LE QUIZZ */
+
+     /* Données à afficher */
+  let questNumber = 0;
+
+  const afficheQuestions = () => {
+    
+    return `<article id="titleImgContainer">
+                              <div id="containTitle">
+                                <img src="assets/Ellipse_6.png" alt="ellipse" id="ellipseTitle">
+                                <h1 id="titleIntro">Question ${questions[questNumber].id}</h1>
+                                <p id="question">${questions[questNumber].question}</p>
+                              </div>
+                              <div id="containImg">
+                                <img src="${questions[questNumber].image}" alt="paysage-biarritz" id="imgCenter">
+                              </div>
+                              <div id="explication" style="display:none">${questions[questNumber].explication}</div>
+                            </article>`;
   }
+
   
-  setInterval(diminuerTemps, 1000);
+  const afficheReponses = () => {
+      
+    return `<section id="bouton-reponse"> 
+                              <button id="A">${questions[questNumber].reponses[0].label}</button> 
+                              <button id="B">${questions[questNumber].reponses[1].label}</button>
+                              <button id="C">${questions[questNumber].reponses[2].label}</button>
+                              <button id="D">${questions[questNumber].reponses[3].label}</button>
+                              <button id="Valider">Valider</button>
+                              <button id="suivant" style="display:none">Suivant</button> 
+                            </section>`;
+  }                      
+
+
+  /*Cliquer sur le bouton "démarrer le quiz", il disparait par la suite et la première question avec ses réponses apparaissent*/
  
-  
+  const buttonCommencer = document.getElementById("buttonCommencer");
+  const boutonReponse = document.getElementById("bouton-reponse");
+  const valider = document.getElementById("Valider");
+
+  buttonCommencer.addEventListener("click", () => {
+    buttonCommencer.style.display = "none";
+    boutonReponse.style.visibility = "visible";
+    goQuiz(questNumber);
+  });
+
+
+
+  /*La première question apparait avec ses réponses, l'explication reste cachée*/
+   /*On choisit une réponse (à ajouter coloration et rép sélectionnée) et on valide*/ 
+   /*si réponse sélectionnée => on affiche l'explication, la réponse donnée est verte ou rouge et la bonne réponse est mise en vert (à ajouter)*/
+   /* sinon rien ne se passe jusqu'à ce que l'utilisateur est sélectionné une réponse*/
+  const goQuiz = (questNumber) => {
+    temps = 60;
+    const quest = document.getElementById("titleQuest-imgCenter");
+    const sectionButton = document.getElementById("section-button");
+
+    let timeStop = setInterval(diminuerTemps, 1000);
+    quest.innerHTML = afficheQuestions();
+    sectionButton.innerHTML = afficheReponses();
+    
+   
+    const explication = document.getElementById("explication");
+    const suivant = document.getElementById("suivant");
+    const valider = document.getElementById("Valider");
+    const chronoBouge = document.getElementById("imgChrono");
+    const timer = document.getElementById("timer");
+
+    valider.addEventListener("click", (event) => {
+      event.preventDefault;
+      explication.style.display = "block";
+      valider.style.display = "none";
+      suivant.style.display = "block";
+
+      /*ICI CODER le "IF" POUR LA SELECTION DE LA REPONSE DE L'UTILSATEUR*/ 
+      /*SI CHOISIT 1 REPONSE => CHANGER LA COULEUR, SI REPONSE FAUSSE METTRE EN ROUGE OU METTRE EN VERT SI REPONSE JUSTE ET COMPTER +1 DANS UNE VARIABLE GLOBALE */
+      /*SI PAS DE REPONSE CHOISIT RIEN NE SE PASSE*/
+     
+      clearInterval(timeStop);
+      timer.innerHTML = "00:00";
+      chronoBouge.classList.remove("bouge");
+     
+    });
+
+    butSuivant();
+    
+  };
+
+  const butSuivant = () => {
+      suivant.addEventListener("click", () => {
+      questNumber++;
+      goQuiz(questNumber);
+    });
+  };
+
