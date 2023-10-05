@@ -19,6 +19,7 @@ img.bouge {
 }
 
 /* Keyframes */
+
 @keyframes wiggle {
 
   0%,
@@ -107,12 +108,13 @@ nav {
 }
 
 
+
 /* MAIN */
+
 main {
   width: 100%;
   margin: 0 auto;
 }
-
 
 /*Section des boutons*/
 
@@ -172,7 +174,6 @@ main {
 }
 
 #bouton-reponse button {
-  background-color: #dfdddd;
   display: block;
   margin: 20PX auto 0;
   padding: 20px 60px;
@@ -185,7 +186,6 @@ main {
   font-weight: 700;
   line-height: normal;
 }
-
 
 .graybtn {
   background-color: #868686;
@@ -278,6 +278,7 @@ main {
 }
 
 
+
 /*Section question, image et explication*/
 
 #titleQuest-imgCenter {
@@ -342,7 +343,9 @@ main {
 }
 
 
+
 /* FOOTER */
+
 footer {
   display: flex;
   justify-content: space-between;
