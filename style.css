@@ -133,6 +133,7 @@ nav {
   border: 0;
   width: 225px;
   height: 30px;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
 
 }
 
@@ -143,11 +144,13 @@ nav {
   gap: 20px;
   font-family: Rubik;
   font-style: italic;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   /*visibility: hidden*/
 }
 
 #Valider {
   grid-column: span 2;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
 }
 
 #cadre {
@@ -223,6 +226,87 @@ main {
   box-shadow: -7px 10px 10px grey;
   display: inline-block;
 
+}
+
+#A:hover {
+  background-color: #373C6D;
+  color: #e0dada;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+#A:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+#B:hover {
+  background-color: #373C6D;
+  color: #e0dada;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+#B:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+#C:hover {
+  background-color: #373C6D;
+  color: #e0dada;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+#C:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+#D:hover {
+  background-color: #373C6D;
+  color: #e0dada;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+#D:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+#Valider:hover {
+  background-color: #373C6D;
+  color: #e0dada;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+#Valider:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.Commencer:hover {
+  background-color: #000000;
+  color: #42B4F4;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.Commencer:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* FOOTER */
