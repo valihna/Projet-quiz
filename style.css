@@ -41,6 +41,7 @@ img.bouge {
   30% {
     transform: rotateZ(10deg);
   }
+
 }
 
 nav {
@@ -105,17 +106,26 @@ nav {
   margin-top: -1px;
 }
 
-/* Main */
+
+/* MAIN */
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/*Section des boutons*/
+
 #section-button {
-  padding: 206 22px;
+     
+  padding:206 22px;
   border: 10 10 10 10;
   border-radius: 10;
   width: 206;
   height: 22;
-
-  font-size: 12px;
-  font-family: Rubik;
-  font-style: italic;
+  font-size: 12px; 
+  font-family: Rubik; 
+  font-style: italic; 
   text-align: center;
   word-wrap: "break-word";
 }
@@ -137,7 +147,6 @@ nav {
 
 }
 
-
 #bouton-reponse {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -151,6 +160,10 @@ nav {
 #Valider {
   grid-column: span 2;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+#suivant {
+  grid-column: span 2;
 }
 
 #cadre {
@@ -173,58 +186,13 @@ nav {
   line-height: normal;
 }
 
-main {
-  width: 100%;
-  margin: 0 auto;
+
+.graybtn {
+  background-color: #868686;
 }
 
-#titleQuest-imgCenter {
-  padding-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-#titleImgContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#containTitle {
-  margin: auto;
-}
-
-#titleIntro {
-  font-style: italic;
-  position: relative;
-  font-style: bold;
-  font-family: Rubik;
-  color: #000000;
-  font-size: 2em;
-  font-weight: 1500;
-  line-height: normal
-}
-
-#ellipseTitle {
-  width: 250px;
-  height: 100px;
-  transform: rotate(5.799deg);
-  position: absolute;
-}
-
-#containImg {
-  width: 80%;
-  margin-top: 30px;
-}
-
-#imgCenter {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: -7px 10px 10px grey;
-  display: inline-block;
+.bluebtn {
+ background-color:#0F9DED;
 
 }
 
@@ -308,6 +276,71 @@ main {
   transform: translateY(0);
   box-shadow: none;
 }
+
+
+/*Section question, image et explication*/
+
+#titleQuest-imgCenter {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#titleImgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#containTitle {
+  margin: auto;
+  text-align: center;
+}
+
+#titleIntro {
+  font-style: italic;
+  position: relative;
+  font-style: bold;
+  font-family: Rubik;
+  color: #000000;
+  font-size: 2em;
+  font-weight: 1500;
+  line-height: normal
+}
+
+#ellipseTitle {
+  width: 250px;
+  height: 100px;
+  transform: rotate(5.799deg);
+  position: absolute;
+}
+
+#containImg {
+  width: 80%;
+  margin-top: 30px;
+}
+
+#imgCenter {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: -7px 10px 10px grey;
+  display: inline-block;
+
+}
+
+#explication{
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+  color: #148BB0;
+  width: 80%;
+  margin-top: 30px;
+  text-align: center;
+}
+
 
 /* FOOTER */
 footer {

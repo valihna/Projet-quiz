@@ -8,13 +8,16 @@
     <title>Quiz Biarritz</title>
 </head>
 
-<body>
+<body>    
+       
+
     <nav class="sticky">
+
         <img src="assets/logobiaritz.png" alt="logo" id="imglogo" />
         <div id="time">
             <div id="containertimer">
                 <img src="assets/chrono.png" alt="chrono" id="imgChrono" />
-                <div id="timer"></div>
+                <div id="timer">00:00</div>
             </div>
         </div>
     </nav>
@@ -25,28 +28,34 @@
                 <div id="containTitle">
                     <img src="assets/Ellipse_6.png" alt="ellipse" id="ellipseTitle">
                     <h1 id="titleIntro">QUIZ BIARRITZ</h1>
+                    <p id="question"></p>
                 </div>
                 <div id="containImg">
                     <img src="/assets/biarritz2.png" alt="paysage-biarritz" id="imgCenter">
                 </div>
+                <div id="explication"></div>
             </article>
         </section>
 
         <section id="section-button">
-            <button class="Commencer">Commencer le quiz</button>
-            <section id="bouton-reponse">
-                <button id="A">A</button>
-                <button id="B">B</button>
-                <button id="C">C</button>
-                <button id="D">D</button>
-                <button id="Valider">Valider</button>
-            </section>
+
+          <button id="buttonCommencer" class="Commencer">Commencer le quiz</button> 
+            <section id="bouton-reponse" style="visibility:hidden"> 
+                <button class="changeColor graybtn" id="A">A</button> 
+                <button class="changeColor graybtn" id="B">B</button>
+                <button class="changeColor graybtn" id="C">C</button>
+                <button class="changeColor graybtn" id="D">D</button>
+                <button id="Valider">Valider</button> 
+                <button id="suivant">Suivant</button> 
+            </section>  
         </section>
+
+          
     </main>
 
     <footer>
         <p>© 2023 biarritz quiz inc.</p>
-        <img src="\assets/logogit.png" />
+        <a href="https://github.com/valihna/Projet-quiz" target="_blank"><img src="\assets/logogit.png" /></a>
     </footer>
 
     <script src="script.js"></script>
