@@ -156,7 +156,6 @@ main {
   font-family: Rubik;
   font-style: italic;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  /*visibility: hidden*/
 }
 
 #Valider {
