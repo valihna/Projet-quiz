@@ -196,7 +196,15 @@ main {
 
 }
 
-#A:hover {
+.greenbtn {
+  background-color:green;
+}
+
+.redbtn {
+  background-color:red;
+}
+
+/* #A:hover {
   background-color: #373C6D;
   color: #e0dada;
   transition: 0.2s;
@@ -249,7 +257,7 @@ main {
 #D:active {
   transform: translateY(0);
   box-shadow: none;
-}
+} */
 
 #Valider:hover {
   background-color: #373C6D;
@@ -259,10 +267,10 @@ main {
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
 }
 
-#Valider:active {
+/* #Valider:active {
   transform: translateY(0);
   box-shadow: none;
-}
+} */
 
 .Commencer:hover {
   background-color: #000000;

@@ -284,8 +284,10 @@ const questions = [
 
 
 /* CHRONO */
-
+let repChoisi = false;
+let block = false;
 let temps = 59;
+let points = 0;
 
 const timerElement = document.getElementById("timer");
 
@@ -324,11 +326,22 @@ const afficheQuestions = () => {
 
   
 const afficheReponses = () => { 
+
+  let repValidity = true;
+
+  for(let i = 0; i < questions[questNumber].reponses.length; i++){
+    if(questions[questNumber].reponses[i].validity === true){
+      repValidity = true;
+    }else{
+      repValidity = false;
+    }
+  }
+
   return `<section id="bouton-reponse"> 
-    <button class="changeColor graybtn" id="A">${questions[questNumber].reponses[0].label}</button> 
-    <button class="changeColor graybtn" id="B">${questions[questNumber].reponses[1].label}</button>
-    <button class="changeColor graybtn" id="C">${questions[questNumber].reponses[2].label}</button>
-    <button class="changeColor graybtn" id="D">${questions[questNumber].reponses[3].label}</button>
+    <button class="changeColor graybtn" id="reponse_${questions[questNumber].reponses[0].id}">${questions[questNumber].reponses[0].label}</button> 
+    <button class="changeColor graybtn" id="reponse_${questions[questNumber].reponses[1].id}">${questions[questNumber].reponses[1].label}</button>
+    <button class="changeColor graybtn" id="reponse_${questions[questNumber].reponses[2].id}">${questions[questNumber].reponses[2].label}</button>
+    <button class="changeColor graybtn" id="reponse_${questions[questNumber].reponses[3].id}">${questions[questNumber].reponses[3].label}</button>
     <button id="Valider">Valider</button>
     <button id="suivant" style="display:none">Suivant</button> 
   </section>`;
@@ -354,23 +367,49 @@ const addReponseClicker = () => {
 
   for (let i = 0; i < changeColor.length; i++) {
     changeColor[i].addEventListener("click", () => {
-
-      if (changeColor[i].className.includes("graybtn")) {
+      if (block) return;
+      if (changeColor[i].className.includes("graybtn") && !repChoisi) {
+        repChoisi = true;
         changeColor[i].classList.replace("graybtn", "bluebtn")
-        
+      } else if (changeColor[i].className.includes("graybtn") && repChoisi) {
+        alert("Vous ne pouvez choisir qu'une seule réponse !")
       } else {
+        repChoisi = false;
         changeColor[i].classList.replace("bluebtn", "graybtn")
       }
     });
   }
 };
 
+const checkValidity = () => {
+  block = true;
+  let changeColor = document.querySelectorAll(".changeColor");
+  let id = +document.getElementById('titleIntro').innerText.split(' ').pop();
 
+  /** Récupération de la question en cours */
+  const currentQuestion = questions.find(question => question.id === id);
+
+  /** Dans la question en cours, récupération de la réponse valid */
+  const validReponse = currentQuestion.reponses.find(resp => resp.validity)
+  for (let i = 0; i < changeColor.length; i++) {
+    let btnId = +changeColor[i].id.split('_').pop();
+    if (btnId === validReponse.id) {
+      let cls = changeColor[i].className.includes('bluebtn') ? "bluebtn": "graybtn";
+      if (cls === "bluebtn") points++;
+      changeColor[i].classList.replace(cls, "greenbtn");
+    } else if (changeColor[i].className.includes('bluebtn') && btnId !== validReponse.id) {
+      changeColor[i].classList.replace("bluebtn", "redbtn")
+    }
+  }
+
+}
 
 /*La première question apparait avec ses réponses, l'explication reste cachée*/
 /*On choisit une réponse (à ajouter coloration et rép sélectionnée) et on valide*/ 
 /*si réponse sélectionnée => on affiche l'explication, la réponse donnée est verte ou rouge et la bonne réponse est mise en vert (à ajouter)*/
 /* sinon rien ne se passe jusqu'à ce que l'utilisateur est sélectionné une réponse*/
+
+
 const goQuiz = (questNumber) => {
   temps = 59;
   const quest = document.getElementById("titleQuest-imgCenter");
@@ -389,7 +428,6 @@ const goQuiz = (questNumber) => {
   const timer = document.getElementById("timer");
 
   valider.addEventListener("click", () => {
-    const repChoisi = true;
 
     if (repChoisi) {
       explication.style.display = "block";
@@ -399,7 +437,8 @@ const goQuiz = (questNumber) => {
       clearInterval(timeStop);
       timer.innerHTML = "00:00";
       chronoBouge.classList.remove("bouge");
-
+      block = true;
+      checkValidity();
     } else {
       alert("Merci de sélectionner une réponse avant de cliquer sur valider!");
     }
@@ -414,6 +453,8 @@ const butSuivant = () => {
         
     if (questNumber !== 9) {
       questNumber++;
+      block = false;
+      repChoisi = false;
       goQuiz(questNumber);
   
     } else {
