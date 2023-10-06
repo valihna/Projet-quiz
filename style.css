@@ -178,7 +178,7 @@ main {
   padding: 20px 60px;
   border-radius: 15px;
   border: 0;
-  color: #148BB0;
+  color:#148BB0; 
   font-family: Rubik;
   font-size: 1rem;
   font-style: italic;
@@ -187,20 +187,20 @@ main {
 }
 
 .graybtn {
-  background-color: #868686;
+  background-color:#BFC9CA;
 }
 
 .bluebtn {
- background-color:#0F9DED;
+ background-color:#373C6D;
 
 }
 
 .greenbtn {
-  background-color:green;
+  background-color:#58D68D;
 }
 
 .redbtn {
-  background-color:red;
+  background-color:#C0392B;
 }
 
 /* #A:hover {
