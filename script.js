@@ -344,7 +344,7 @@ const valider = document.getElementById("Valider");
 
 buttonCommencer.addEventListener("click", () => {
   buttonCommencer.style.display = "none";
-  boutonReponse.style.visibility = "visible";
+  boutonReponse.style.visibility = "hidden";
   goQuiz(questNumber);
 });
 
