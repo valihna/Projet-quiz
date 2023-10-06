@@ -1,3 +1,4 @@
+
 const questions = [
   {
     id: 1,
@@ -5,9 +6,9 @@ const questions = [
     image: "/assets/biarritz1.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Pays Vasque",
-      validity: false
+        id: 1,
+        label: "Le Pays Vasque",
+        validity: false
       },
       {
         id: 2,
@@ -33,9 +34,9 @@ const questions = [
     image: "/assets/rochervierge.jpg",
     reponses: [
       {
-      id: 1,
-      label: "La Belle Hélène",
-      validity: false
+        id: 1,
+        label: "La Belle Hélène",
+        validity: false
       },
       {
         id: 2,
@@ -61,9 +62,9 @@ const questions = [
     image: "/assets/biarritz12.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Golfe de d'Artagnan",
-      validity: false
+        id: 1,
+        label: "Le Golfe de d'Artagnan",
+        validity: false
       },
       {
         id: 2,
@@ -89,9 +90,9 @@ const questions = [
     image: "/assets/biarritz10.png",
     reponses: [
       {
-      id: 1,
-      label: "Eugénie de Montijo",
-      validity: true
+        id: 1,
+        label: "Eugénie de Montijo",
+        validity: true
       },
       {
         id: 2,
@@ -117,9 +118,9 @@ const questions = [
     image: "/assets/biarritz3.png",
     reponses: [
       {
-      id: 1,
-      label: "Le Pimentais",
-      validity: false
+        id: 1,
+        label: "Le Pimentais",
+        validity: false
       },
       {
         id: 2,
@@ -145,9 +146,9 @@ const questions = [
     image: "/assets/rugybiarritz.jpg",
     reponses: [
       {
-      id: 1,
-      label: "Biarritz Olympique Pays Basque",
-      validity: true
+        id: 1,
+        label: "Biarritz Olympique Pays Basque",
+        validity: true
       },
       {
         id: 2,
@@ -173,9 +174,9 @@ const questions = [
     image: "/assets/biarritz14.png",
     reponses: [
       {
-      id: 1,
-      label: "Le poker, la belotte et le tarot",
-      validity: false
+        id: 1,
+        label: "Le poker, la belotte et le tarot",
+        validity: false
       },
       {
         id: 2,
@@ -201,9 +202,9 @@ const questions = [
     image: "/assets/biarritz13.png",
     reponses: [
       {
-      id: 1,
-      label: "Villa Ceezar",
-      validity: false
+        id: 1,
+        label: "Villa Ceezar",
+        validity: false
       },
       {
         id: 2,
@@ -229,9 +230,9 @@ const questions = [
     image: "/assets/biarritz9.png",
     reponses: [
       {
-      id: 1,
-      label: "Poucet",
-      validity: false
+        id: 1,
+        label: "Poucet",
+        validity: false
       },
       {
         id: 2,
@@ -257,9 +258,9 @@ const questions = [
     image: "/assets/biarritz15.png",
     reponses: [
       {
-      id: 1,
-      label: "Le musée des phoques",
-      validity: false
+        id: 1,
+        label: "Le musée des phoques",
+        validity: false
       },
       {
         id: 2,
@@ -282,13 +283,9 @@ const questions = [
 ];
 
 
-
-
-
-
 /* CHRONO */
 
-let temps = 60;
+let temps = 59;
 
 const timerElement = document.getElementById("timer");
 
@@ -300,6 +297,131 @@ function diminuerTemps() {
 
   minutes = minutes < 10 ? "0" + minutes : minutes;
   secondes = secondes < 10 ? "0" + secondes : secondes;
+
+    timerElement.innerText = `${minutes} : ${secondes}`;
+    temps = temps <= 0 ? 0 : temps - 1;
+}
+  
+
+/* DEMARRER LE QUIZZ */
+
+  /* Données à afficher */
+let questNumber = 0;
+
+const afficheQuestions = () => {
+  return `<article id="titleImgContainer">
+    <div id="containTitle">
+      <img src="assets/Ellipse_6.png" alt="ellipse" id="ellipseTitle">
+      <h1 id="titleIntro">Question ${questions[questNumber].id}</h1>
+      <p id="question">${questions[questNumber].question}</p>
+    </div>
+    <div id="containImg">
+      <img src="${questions[questNumber].image}" alt="paysage-biarritz" id="imgCenter">
+    </div>
+    <div id="explication" style="display:none">${questions[questNumber].explication}</div>
+  </article>`;
+}
+
+  
+const afficheReponses = () => { 
+  return `<section id="bouton-reponse"> 
+    <button class="changeColor graybtn" id="A">${questions[questNumber].reponses[0].label}</button> 
+    <button class="changeColor graybtn" id="B">${questions[questNumber].reponses[1].label}</button>
+    <button class="changeColor graybtn" id="C">${questions[questNumber].reponses[2].label}</button>
+    <button class="changeColor graybtn" id="D">${questions[questNumber].reponses[3].label}</button>
+    <button id="Valider">Valider</button>
+    <button id="suivant" style="display:none">Suivant</button> 
+  </section>`;
+}                      
+
+
+/*Cliquer sur le bouton "démarrer le quiz", il disparait par la suite et la première question avec ses réponses apparaissent*/
+ 
+const buttonCommencer = document.getElementById("buttonCommencer");
+const boutonReponse = document.getElementById("bouton-reponse");
+const valider = document.getElementById("Valider");
+
+
+buttonCommencer.addEventListener("click", () => {
+  buttonCommencer.style.display = "none";
+  boutonReponse.style.visibility = "visible";
+  goQuiz(questNumber);
+});
+
+
+const addReponseClicker = () => {
+  let changeColor = document.querySelectorAll(".changeColor");
+
+  for (let i = 0; i < changeColor.length; i++) {
+    changeColor[i].addEventListener("click", () => {
+
+      if (changeColor[i].className.includes("graybtn")) {
+        changeColor[i].classList.replace("graybtn", "bluebtn")
+        
+      } else {
+        changeColor[i].classList.replace("bluebtn", "graybtn")
+      }
+    });
+  }
+};
+
+
+
+/*La première question apparait avec ses réponses, l'explication reste cachée*/
+/*On choisit une réponse (à ajouter coloration et rép sélectionnée) et on valide*/ 
+/*si réponse sélectionnée => on affiche l'explication, la réponse donnée est verte ou rouge et la bonne réponse est mise en vert (à ajouter)*/
+/* sinon rien ne se passe jusqu'à ce que l'utilisateur est sélectionné une réponse*/
+const goQuiz = (questNumber) => {
+  temps = 59;
+  const quest = document.getElementById("titleQuest-imgCenter");
+  const sectionButton = document.getElementById("section-button");
+   
+  let timeStop = setInterval(diminuerTemps, 1000);
+  quest.innerHTML = afficheQuestions();
+  sectionButton.innerHTML = afficheReponses();
+
+  addReponseClicker();
+
+  const explication = document.getElementById("explication");
+  const suivant = document.getElementById("suivant");
+  const valider = document.getElementById("Valider");
+  const chronoBouge = document.getElementById("imgChrono");
+  const timer = document.getElementById("timer");
+
+  valider.addEventListener("click", () => {
+    const repChoisi = true;
+
+    if (repChoisi) {
+      explication.style.display = "block";
+      valider.style.display = "none";
+      suivant.style.display = "block";
+
+      clearInterval(timeStop);
+      timer.innerHTML = "00:00";
+      chronoBouge.classList.remove("bouge");
+
+    } else {
+      alert("Merci de sélectionner une réponse avant de cliquer sur valider!");
+    }
+  });
+
+  butSuivant();
+    
+};
+
+const butSuivant = () => {
+  suivant.addEventListener("click", () => {
+        
+    if (questNumber !== 9) {
+      questNumber++;
+      goQuiz(questNumber);
+  
+    } else {
+      alert("Quiz fini afficher le score!");
+    }
+  });
+};
+
 
   timerElement.innerText = `${minutes} : ${secondes}`;
   temps = temps <= 0 ? 0 : temps - 1;
