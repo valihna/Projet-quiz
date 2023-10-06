@@ -458,7 +458,7 @@ const butSuivant = () => {
       goQuiz(questNumber);
   
     } else {
-      alert("Quiz fini afficher le score!");
+      alert(`Quiz fini votre score est de ${points} points!`);
     }
   });
 };
