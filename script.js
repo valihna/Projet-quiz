@@ -375,10 +375,12 @@ const goQuiz = (questNumber) => {
   temps = 59;
   const quest = document.getElementById("titleQuest-imgCenter");
   const sectionButton = document.getElementById("section-button");
+  const ellipseTitle = document.getElementById("ellipseTitle");
    
   let timeStop = setInterval(diminuerTemps, 1000);
   quest.innerHTML = afficheQuestions();
   sectionButton.innerHTML = afficheReponses();
+  ellipseTitle.style.visibility = "visible";
 
   addReponseClicker();
 
