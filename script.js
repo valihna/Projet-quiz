@@ -283,60 +283,6 @@ const questions = [
 ];
 
 
-
-/* feature/buttonDesign changecolor*/ 
-
-
-
-/*function red(){
-	changeColor.style.backgroundColor = "red";
-};
-function blue(){
-	changeColor.style.backgroundColor = "blue";
-}; */
-
-
-/*changeColor.addEventListener("click", red);
-changeColor.addEventListener("click", blue); */
-  
-
-/*$$$$$$$$$l$$$$$$$$$$$$$$ 
-let choise = true;
-function changeColor(){
-  let button = document.getElementById("button");
-  if( choise == true ) {
-    changeColor.style.backgroundColor = "green";
-    choise = false;
-  }
-  else{
-    changeColor.style.backgroundColor = "red";
-    choise = true;
-  }
-}
-$$$$$$$$$$*/
-
-/*addChangeColorClicker();
-element.addEventListener("click", changeColor() { alert("background-color"), });
-console.log("hello") 
-
-/*element.addEventListener("click", changeColor);*/
-
-/*const addChangeColorClicker = () => {
-  changeColor = document.querySelectorAll('.changeColor')
-  for (let i = 0; i < changeColor.length; i++) {
-    changeColor[i].addEventListener('click', () => {
-    if (changeColor[i].style.background ==="blue") changeColor[i].style.background="grey"
-    else changeColor[i].style.background="blue"
-
-  }) 
- }
-}*/
-
-
-
-
-
-
 /* CHRONO */
 
 let temps = 59;
@@ -364,28 +310,28 @@ let questNumber = 0;
 
 const afficheQuestions = () => {
   return `<article id="titleImgContainer">
-            <div id="containTitle">
-              <img src="assets/Ellipse_6.png" alt="ellipse" id="ellipseTitle">
-              <h1 id="titleIntro">Question ${questions[questNumber].id}</h1>
-              <p id="question">${questions[questNumber].question}</p>
-            </div>
-            <div id="containImg">
-              <img src="${questions[questNumber].image}" alt="paysage-biarritz" id="imgCenter">
-            </div>
-            <div id="explication" style="display:none">${questions[questNumber].explication}</div>
-          </article>`;
+    <div id="containTitle">
+      <img src="assets/Ellipse_6.png" alt="ellipse" id="ellipseTitle">
+      <h1 id="titleIntro">Question ${questions[questNumber].id}</h1>
+      <p id="question">${questions[questNumber].question}</p>
+    </div>
+    <div id="containImg">
+      <img src="${questions[questNumber].image}" alt="paysage-biarritz" id="imgCenter">
+    </div>
+    <div id="explication" style="display:none">${questions[questNumber].explication}</div>
+  </article>`;
 }
 
   
 const afficheReponses = () => { 
   return `<section id="bouton-reponse"> 
-            <button class="changeColor graybtn" id="A">${questions[questNumber].reponses[0].label}</button> 
-            <button class="changeColor graybtn" id="B">${questions[questNumber].reponses[1].label}</button>
-            <button class="changeColor graybtn" id="C">${questions[questNumber].reponses[2].label}</button>
-            <button class="changeColor graybtn" id="D">${questions[questNumber].reponses[3].label}</button>
-            <button id="Valider">Valider</button>
-            <button id="suivant" style="display:none">Suivant</button> 
-          </section>`;
+    <button class="changeColor graybtn" id="A">${questions[questNumber].reponses[0].label}</button> 
+    <button class="changeColor graybtn" id="B">${questions[questNumber].reponses[1].label}</button>
+    <button class="changeColor graybtn" id="C">${questions[questNumber].reponses[2].label}</button>
+    <button class="changeColor graybtn" id="D">${questions[questNumber].reponses[3].label}</button>
+    <button id="Valider">Valider</button>
+    <button id="suivant" style="display:none">Suivant</button> 
+  </section>`;
 }                      
 
 
