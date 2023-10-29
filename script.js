@@ -313,7 +313,6 @@ let questNumber = 0;
 const afficheQuestions = () => {
   return `<article id="titleImgContainer">
     <div id="containTitle">
-      <img src="assets/Ellipse_6.png" alt="ellipse" id="ellipseTitle">
       <h1 id="titleIntro">Question ${questions[questNumber].id}</h1>
       <p id="question">${questions[questNumber].question}</p>
     </div>
